@@ -12,8 +12,6 @@ The data are grouped into stints, periods when both teams’ lineups stay the sa
 
 The lab uses ridge regression to estimate player contributions. Cross validation and bootstrap resampling help assess the estimates. Stints with fewer possessions tend to have more variable margins, so the model accounts for the number of possessions in each stint.
 
-The assignment asks for code, written explanations, and mathematics in a Quarto Markdown document. Submit both the .qmd file and its PDF to Brightspace.
-
 ```{python}
 #| execution: {iopub.execute_input: '2026-10-18T20:30:25.884270Z', iopub.status.busy: '2026-10-18T20:30:25.883853Z', iopub.status.idle: '2026-10-18T20:30:27.688345Z', shell.execute_reply: '2026-10-18T20:30:27.687132Z'}
 import pandas as pd
@@ -28,7 +26,7 @@ nba_stints.iloc[:3, 2:7]
 Each row in `nba_stints` describes one **stint**, a period when the lineups stay the same. The preview shows the outcome fields for three stints. The full table has 546 columns: seven game and outcome fields plus 539 player ID columns. The numbers at the left (0–2) are pandas row indexes, not data columns.
 
 | Column(s) | Meaning |
-|---|---|
+|------------------------------------|------------------------------------|
 | `game_id` | Identifier for the NBA game. Rows with the same value come from the same game. |
 | `stint_id` | Stint number within that game, identifying the sequence of lineup periods. |
 | `n_pos` | Number of possessions in the stint. Margins from shorter stints tend to vary more. |
